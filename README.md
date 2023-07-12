@@ -3,6 +3,8 @@ This is still under development moreover this git still all basic, I will add pu
 You can use this git as you pleases😉.
 This git might having update until my brain explode.
 I personally am just a beginner on backend programming.
+
+  
 # CodeIgniter 4 Application Starter
 
 <h1 align="center">Me when doing Codeigniter</h1
@@ -70,7 +72,8 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-Reminder, love your waifu like you love your own wife
+<h1>Reminder, love your waifu like you love your own wife</h1>
+
 ![Bocchi](https://media.tenor.com/KVFqRA1S1NoAAAAd/bocchi-the-rock-bocchi.gif)
 
 College Student at Universitas Amikom Yogyakarta [More Information](https://home.amikom.ac.id/)

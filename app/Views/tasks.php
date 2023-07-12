@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>To-Do List</title>
-    <!-- Tambahkan link CSS Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -26,7 +25,6 @@
         <a href="/auth/logout" class="btn btn-secondary mt-4">Logout</a>
     </div>
 
-    <!-- Tambahkan script JS Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

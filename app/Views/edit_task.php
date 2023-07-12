@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Tugas</title>
+    <title>Edit Tugas</title>
     <!-- Tambahkan link CSS Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Tambah Tugas</h1>
+        <h1 class="mt-5">Edit Tugas</h1>
 
-        <form action="/tasks/store" method="post" class="mt-4">
+        <form action="/tasks/update/<?= $task['id'] ?>" method="post" class="mt-4">
             <div class="form-group">
                 <label for="task_name">Nama Tugas:</label>
-                <input type="text" id="task_name" name="task_name" class="form-control" required>
+                <input type="text" id="task_name" name="task_name" class="form-control" value="<?= $task['task_name'] ?>" required>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>

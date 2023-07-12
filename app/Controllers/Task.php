@@ -47,4 +47,47 @@ class Task extends BaseController
 
         return redirect()->to('/tasks');
     }
+    public function edit($id)
+    {
+        $model = new TaskModel();
+        $task = $model->find($id);
+
+        if (!$task) {
+            return redirect()->to('/tasks')->with('error', 'Tugas tidak ditemukan.');
+        }
+
+        return view('edit_task', ['task' => $task]);
+    }
+
+    public function update($id)
+    {
+        $model = new TaskModel();
+        $task = $model->find($id);
+
+        if (!$task) {
+            return redirect()->to('/tasks')->with('error', 'Tugas tidak ditemukan.');
+        }
+
+        $newTaskName = $this->request->getPost('task_name');
+        $data = [
+            'task_name' => $newTaskName
+        ];
+        $model->update($id, $data);
+
+        return redirect()->to('/tasks')->with('success', 'Tugas berhasil diperbarui.');
+    }
+
+    public function delete($id)
+    {
+        $model = new TaskModel();
+        $task = $model->find($id);
+
+        if (!$task) {
+            return redirect()->to('/tasks')->with('error', 'Tugas tidak ditemukan.');
+        }
+
+        $model->delete($id);
+
+        return redirect()->to('/tasks')->with('success', 'Tugas berhasil dihapus.');
+    }
 }

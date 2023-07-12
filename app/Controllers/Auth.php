@@ -27,7 +27,7 @@ class Auth extends BaseController
             return redirect()->to('/tasks');
         } else {
             // Login gagal, tampilkan pesan error
-            return redirect()->back()->with('error', 'Username atau password salah.');
+            return redirect()->back()->withInput()->with('error', 'Username atau password salah.');
         }
     }
 
@@ -38,4 +38,30 @@ class Auth extends BaseController
         $session->remove('user_id');
         return redirect()->to('/');
     }
+    public function register()
+{
+    // Tampilkan form registrasi
+    return view('register');
+}
+
+public function store()
+{
+    $model = new UserModel();
+    $username = $this->request->getPost('username');
+    $password = $this->request->getPost('password');
+
+    // Enkripsi password sebelum menyimpan ke database
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Simpan data pengguna ke database
+    $data = [
+        'username' => $username,
+        'password' => $hashedPassword
+    ];
+    $model->insert($data);
+
+    // Redirect ke halaman login setelah registrasi sukses
+    return redirect()->to('/auth/login')->with('success', 'Registrasi berhasil. Silakan login.');
+}
+
 }

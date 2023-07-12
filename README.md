@@ -75,7 +75,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
 
-<h1>Reminder, love your waifu like you love your own wife</h1>
+<h1>Reminder, love your waifu like you love your own life</h1>
 
 ![Bocchi](https://media.tenor.com/KVFqRA1S1NoAAAAd/bocchi-the-rock-bocchi.gif)
 
